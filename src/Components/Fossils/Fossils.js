@@ -1,0 +1,55 @@
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import classes from './Fossils.module.css'
+
+const Fossils = () => {
+  const [getFossils, setFossils] = useState(null)
+  const [getInputValue, setInputValue] = useState('')
+  const [active, setActive] = useState(null)
+
+  useEffect(() => {
+    axios
+      .get(`http://acnhapi.com/v1a/fossils`)
+      .then((fossils) => setFossils(fossils.data))
+  }, [])
+
+  const filterResults = (e) => {
+    setActive(true)
+    setInputValue(e.target.value.toLowerCase())
+  }
+
+  if (!getFossils) return <h1>Loading...</h1>
+
+  const filterResult = getFossils.filter((fossil) => {
+    return fossil.name['name-USen'].toLowerCase().includes(getInputValue)
+  })
+
+  console.log(getFossils)
+  return (
+    <>
+      <div className={classes.SearchInput}>
+        <label>Search</label>
+        <input
+          type='text'
+          placeholder='Spino Skull..'
+          onChange={(e) => filterResults(e)}
+        />
+      </div>
+      <div className={classes.FossilContainer}>
+        {filterResult.map((fossil) => (
+          <div className={classes.Fossil} key={fossil.name['name-USen']}>
+            <p>{fossil.name['name-USen']}</p>
+            <p>Price: {fossil.price}</p>
+            <img
+              src={fossil.image_uri}
+              alt={fossil.name['name-USen']}
+              lazy='true'
+            />
+          </div>
+        ))}
+      </div>
+    </>
+  )
+}
+
+export default Fossils

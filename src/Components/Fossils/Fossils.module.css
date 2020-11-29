@@ -1,0 +1,55 @@
+.FossilContainer {
+  font-family: 'Roboto', sans-serif;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 30px;
+}
+
+.Fossil {
+  border: 2px solid #701212;
+  text-align: center;
+  background-color: #e1e7ec;
+  padding: 10px;
+  box-shadow: 2px 2px 2px #ffd1d1;
+}
+
+.SearchInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.SearchInput label {
+  font-family: 'Thasadith', sans-serif;
+  font-size: 24px;
+  text-shadow: 1px 1px 1px #ffb7b7;
+  font-weight: 600;
+}
+
+.SearchInput input {
+  font-family: 'Thasadith', sans-serif;
+  background-color: #ffe8d5;
+  margin: 0 25px 30px;
+  width: 35%;
+  border-radius: 6px;
+  font-size: 20px;
+  border: 2px solid brown;
+  font-weight: 600;
+}
+
+.SearchInput input:active,
+.SearchInput input:hover {
+  color: black;
+  background-color: #fff6e5;
+  border: 2px solid #fcd284;
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .SearchInput input {
+    width: 65%;
+  }
+}

@@ -1,0 +1,47 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: start;
+  padding: 10px;
+  flex: 0 1 200px;
+  border: 2px solid #d996ff;
+  text-align: center;
+  background-color: #ffebff;
+}
+
+.SearchInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.SearchInput input {
+  margin: 0 0 20px 20px;
+  width: 30%;
+  border-radius: 6px;
+  height: 20px;
+  background-color: #fffaff;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.SearchInput label {
+  font-size: 25px;
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .SearchInput input {
+    width: 65%;
+  }
+}

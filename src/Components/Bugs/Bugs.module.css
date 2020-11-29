@@ -1,0 +1,65 @@
+.BugsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 15px;
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+.BugCard {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.Common {
+  background: #ddf;
+}
+
+.Uncommon {
+  background: #d2f9d2;
+}
+
+.Rare {
+  background: #ffbdff;
+}
+
+.InputSearch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: 'Delius Swash Caps', cursive;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.InputSearch input {
+  margin-left: 15px;
+  border-radius: 4px;
+  width: 75%;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.BugButton {
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  background: #fc9090;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px #e7bdbd;
+  color: #ffe7e7;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 1px #f99;
+  cursor: pointer;
+}
+
+.BugButton:hover,
+.BugButton:active {
+  background-color: #ffe7e7;
+  color: #fc9090;
+  box-shadow: 2px 2px 2px #f99;
+  text-shadow: 1px 1px 1px #e7bdbd;
+}

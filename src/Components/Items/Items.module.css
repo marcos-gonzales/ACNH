@@ -1,0 +1,65 @@
+.ItemContainer {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.ItemCard {
+  border: 2px solid indigo;
+  padding: 10px;
+  text-align: center;
+}
+
+.SearchContainer {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 15px;
+  flex-direction: row;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.SearchContainer label {
+  font-size: 24px;
+}
+
+.SearchContainer input {
+  height: 30px;
+  width: 250px;
+  border-radius: 6px;
+  background-color: #fff4ff;
+  font-size: 20px;
+}
+
+.Pagination {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 5px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.Pagination li {
+  list-style: none;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.Pagination li:visited,
+.Pagination li:active,
+.Pagination li:hover {
+  color: purple;
+}
+
+.Pagination a:hover {
+  color: purple;
+}
+
+@media (min-width: 300px) {
+  .SearchContainer {
+    width: 65%;
+  }
+}

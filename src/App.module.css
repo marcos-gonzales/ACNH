@@ -1,0 +1,54 @@
+.ProjectContainer {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 95px;
+}
+
+.Nav {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto 30px;
+  height: 50px;
+  background-color: #ffd4af;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.Nav li {
+  padding: 10px;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.Nav a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: 22px;
+}
+
+.Nav a:hover,
+.Nav a:active {
+  color: #7a6e2f;
+  text-decoration: underline;
+}
+
+.HeroImage {
+  height: 300px;
+  width: 60%;
+  margin: 10px auto 50px;
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+  .Nav {
+    justify-content: space-between;
+  }
+  .Nav a {
+    font-size: 13px;
+  }
+  .HeroImage {
+    width: 100%;
+  }
+}
