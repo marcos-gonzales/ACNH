@@ -111,7 +111,7 @@ const Items = () => {
             <p>Time Available: {bugs.availability.time}</p>
             <p>Rarity: {bugs.availability.rarity}</p>
             <img
-              lazy='true'
+              loading='lazy'
               style={{ height: '100px', width: '100px' }}
               src={bugs.image_uri}
               alt={bugs.name['name-nameEN']}

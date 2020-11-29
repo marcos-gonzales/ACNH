@@ -50,7 +50,7 @@ const Villagers = () => {
             <img
               src={villager.image_uri}
               alt={villager.name['name-USen']}
-              lazy='true'
+              loading='lazy'
               style={{
                 borderRadius: '50%',
                 height: '120px',

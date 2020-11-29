@@ -66,7 +66,7 @@ const Items = () => {
                   <img
                     src={item__.image_uri}
                     alt={item__.name['name-USen']}
-                    lazy='true'
+                    loading='lazy'
                   />
                 </div>
               ))

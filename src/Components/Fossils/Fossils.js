@@ -40,7 +40,7 @@ const Fossils = () => {
             <img
               src={fossil.image_uri}
               alt={fossil.name['name-USen']}
-              lazy='true'
+              loading='lazy'
             />
           </div>
         ))}
