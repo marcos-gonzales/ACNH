@@ -5,7 +5,6 @@ import classes from './Fossils.module.css'
 const Fossils = () => {
   const [getFossils, setFossils] = useState(null)
   const [getInputValue, setInputValue] = useState('')
-  const [active, setActive] = useState(null)
 
   useEffect(() => {
     axios
@@ -14,7 +13,6 @@ const Fossils = () => {
   }, [])
 
   const filterResults = (e) => {
-    setActive(true)
     setInputValue(e.target.value.toLowerCase())
   }
 
@@ -24,7 +22,6 @@ const Fossils = () => {
     return fossil.name['name-USen'].toLowerCase().includes(getInputValue)
   })
 
-  console.log(getFossils)
   return (
     <>
       <div className={classes.SearchInput}>

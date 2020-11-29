@@ -28,8 +28,6 @@ const Villagers = () => {
     )
   })
 
-  console.log(getVillager)
-
   return (
     <>
       <div className={classes.SearchInput}>

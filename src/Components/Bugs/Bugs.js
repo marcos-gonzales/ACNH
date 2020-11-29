@@ -63,6 +63,7 @@ const Items = () => {
       <div className={classes.BugsContainer}>
         {searchBugs.map((bugs) => (
           <div
+            key={bugs.name['name-USen']}
             className={classes.BugCard}
             style={{
               background:

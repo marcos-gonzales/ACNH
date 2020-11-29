@@ -19,9 +19,7 @@ const App = () => {
   })
 
   const activeNav = (e) => {
-    console.log(e.target.textContent)
     if (e.target.textContent === 'Villagers') {
-      console.log('this is working')
       setActive({ villagers: true })
     }
     if (e.target.textContent === 'Bugs') {
@@ -31,7 +29,6 @@ const App = () => {
       setActive({ fossils: true })
     }
     if (e.target.textContent === 'Items') {
-      console.log('working')
       setActive({ items: true })
     }
     if (e.target.textContent === 'Home') {
