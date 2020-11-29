@@ -19,6 +19,7 @@ const App = () => {
   })
 
   const activeNav = (e) => {
+    console.log(e)
     if (e.target.textContent === 'Villagers') {
       setActive({ villagers: true })
     }

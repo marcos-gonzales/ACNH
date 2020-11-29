@@ -31,12 +31,12 @@ const Items = () => {
   const currentItems = getItems.slice(firstItem, lastItem)
 
   const searchItem = (e) => {
-    setSearchInput(e.target.value)
+    setSearchInput(e.target.value.toLowerCase())
   }
 
   const filterSearch = getItems.map((item) => {
     return item.filter((singleItem) => {
-      return singleItem.name['name-USen'].includes(searchInput)
+      return singleItem.name['name-USen'].toLowerCase().includes(searchInput)
     })
   })
 
@@ -47,7 +47,7 @@ const Items = () => {
         <input
           type='text'
           onChange={(e) => searchItem(e)}
-          placeholder='iron kitchen...'
+          placeholder='ironwood kitchen...'
         />
       </div>
 
