@@ -63,3 +63,15 @@
   box-shadow: 2px 2px 2px #f99;
   text-shadow: 1px 1px 1px #e7bdbd;
 }
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .InputSearch {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-gap: 15px;
+  }
+  .BugButton {
+    justify-self: center;
+  }
+}

@@ -60,6 +60,6 @@
 
 @media (min-width: 300px) {
   .SearchContainer {
-    width: 65%;
+    width: auto;
   }
 }

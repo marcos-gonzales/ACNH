@@ -10,29 +10,86 @@ import Items from './Components/Items/Items'
 import classes from './App.module.css'
 
 const App = () => {
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState({
+    villagers: null,
+    home: null,
+    bugs: null,
+    fossiles: null,
+    items: null,
+  })
+
+  const activeNav = (e) => {
+    console.log(e.target.textContent)
+    if (e.target.textContent === 'Villagers') {
+      console.log('this is working')
+      setActive({ villagers: true })
+    }
+    if (e.target.textContent === 'Bugs') {
+      setActive({ bugs: true })
+    }
+    if (e.target.textContent === 'Fossils') {
+      setActive({ fossils: true })
+    }
+    if (e.target.textContent === 'Items') {
+      console.log('working')
+      setActive({ items: true })
+    }
+    if (e.target.textContent === 'Home') {
+      setActive({ home: true })
+    }
+  }
 
   return (
     <Router>
       <nav className={classes.Nav}>
         <li>
-          <Link to='/'>Home</Link>
+          <Link
+            to='/'
+            className={active.home ? classes.Active : null}
+            onClick={(e) => activeNav(e)}
+          >
+            Home
+          </Link>
         </li>
 
         <li>
-          <Link to='/villagers'>Villagers</Link>
+          <Link
+            to='/villagers'
+            onClick={(e) => activeNav(e)}
+            className={active.villagers ? classes.Active : null}
+          >
+            Villagers
+          </Link>
         </li>
 
         <li>
-          <Link to='/bugs'>Bugs</Link>
+          <Link
+            to='/bugs'
+            onClick={(e) => activeNav(e)}
+            className={active.bugs ? classes.Active : null}
+          >
+            Bugs
+          </Link>
         </li>
 
         <li>
-          <Link to='fossils'>Fossils</Link>
+          <Link
+            to='fossils'
+            onClick={(e) => activeNav(e)}
+            className={active.fossils ? classes.Active : null}
+          >
+            Fossils
+          </Link>
         </li>
 
         <li>
-          <Link to='items'>Items</Link>
+          <Link
+            to='items'
+            onClick={(e) => activeNav(e)}
+            className={active.items ? classes.Active : null}
+          >
+            Items
+          </Link>
         </li>
       </nav>
 

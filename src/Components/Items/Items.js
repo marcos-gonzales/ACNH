@@ -44,7 +44,11 @@ const Items = () => {
     <>
       <div className={classes.SearchContainer}>
         <label>Search</label>
-        <input type='text' onChange={(e) => searchItem(e)} />
+        <input
+          type='text'
+          onChange={(e) => searchItem(e)}
+          placeholder='iron kitchen...'
+        />
       </div>
 
       <div className={classes.SearchContainer}>

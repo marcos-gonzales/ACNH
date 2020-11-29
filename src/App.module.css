@@ -41,6 +41,10 @@
   margin: 10px auto 50px;
 }
 
+.Active {
+  color: #93512a !important;
+}
+
 @media (max-width: 500px) and (min-width: 300px) {
   .Nav {
     justify-content: space-between;

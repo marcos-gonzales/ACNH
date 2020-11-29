@@ -41,7 +41,15 @@
 }
 
 @media (min-width: 300px) and (max-width: 500px) {
+  .SearchInput {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .SearchInput label {
+    justify-self: center;
+  }
   .SearchInput input {
-    width: 65%;
+    width: 80%;
+    justify-self: center;
   }
 }
