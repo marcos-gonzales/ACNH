@@ -63,6 +63,7 @@ const Items = () => {
                   {item__['sell-price'] ? (
                     <p>Sell Price: {item__['sell-price']}</p>
                   ) : null}
+                  {item__.source ? <p>Source: {item__.source}</p> : null}
                   <img
                     src={item__.image_uri}
                     alt={item__.name['name-USen']}
