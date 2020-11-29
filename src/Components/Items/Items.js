@@ -102,9 +102,12 @@ const Items = () => {
                 color: currentPage === index + 1 ? 'purple' : 'blue',
               }}
             >
-              <a className={classes.Links} onClick={() => paginate(pageNumber)}>
+              <button
+                className={classes.Links}
+                onClick={() => paginate(pageNumber)}
+              >
                 {pageNumber}
-              </a>
+              </button>
             </li>
           ))}
         </ul>

@@ -48,13 +48,13 @@
   cursor: pointer;
 }
 
-.Pagination li:visited,
-.Pagination li:active,
-.Pagination li:hover {
+.Pagination button:visited,
+.Pagination button:active,
+.Pagination button:hover {
   color: purple;
 }
 
-.Pagination a:hover {
+.Pagination button:hover {
   color: purple;
 }
 
@@ -62,4 +62,12 @@
   .SearchContainer {
     width: auto;
   }
+}
+
+.Links {
+  border: none;
+  background-color: white;
+  color: blue;
+  font-size: 14px;
+  cursor: pointer;
 }
